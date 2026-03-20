@@ -1,0 +1,1467 @@
+@import 'animate.css';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #121212;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #232428;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+  background: #000 !important;
+  color: #fff !important;
+  transition: background 0.3s, color 0.3s;
+}
+body.light-mode, html.light-mode {
+  background: #fff !important;
+  color: #181818 !important;
+}
+
+body.light-mode {
+  background: #f7f7f7;
+  color: #181818;
+}
+
+.App.light-mode {
+  background: #fff;
+  color: #181818;
+}
+
+body.light-mode .card,
+body.light-mode .cert-card,
+body.light-mode .tech-card,
+body.light-mode .project-card,
+.App.light-mode .card,
+.App.light-mode .cert-card,
+.App.light-mode .tech-card,
+.App.light-mode .project-card {
+  background: #fff !important;
+  color: #181818 !important;
+  border: 1.5px solid #e0e0e0 !important;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+}
+
+body.light-mode .card-title,
+body.light-mode .project-title,
+body.light-mode .fw-bold,
+body.light-mode .modal-title,
+body.light-mode .modal-content,
+body.light-mode .modal-header,
+body.light-mode .modal-footer,
+body.light-mode .modal-body,
+.App.light-mode .card-title,
+.App.light-mode .project-title,
+.App.light-mode .fw-bold,
+.App.light-mode .modal-title,
+.App.light-mode .modal-content,
+.App.light-mode .modal-header,
+.App.light-mode .modal-footer,
+.App.light-mode .modal-body {
+  color: #181818 !important;
+}
+
+body.light-mode .project-desc,
+body.light-mode .exp-org,
+body.light-mode .exp-year,
+body.light-mode .text-secondary,
+.App.light-mode .project-desc,
+.App.light-mode .exp-org,
+.App.light-mode .exp-year,
+.App.light-mode .text-secondary {
+  color: #444 !important;
+}
+
+body.light-mode .modal-content,
+.App.light-mode .modal-content {
+  background: #fff !important;
+  color: #181818 !important;
+  border: 1.5px solid #e0e0e0 !important;
+}
+
+body.light-mode .modal-overlay,
+.App.light-mode .modal-overlay {
+  background: rgba(0,0,0,0.12) !important;
+}
+
+body.light-mode .btn,
+body.light-mode .btn-dark,
+body.light-mode .btn-outline-light,
+body.light-mode .btn-info,
+body.light-mode .send-btn-hover,
+body.light-mode .pill-btn,
+.App.light-mode .btn,
+.App.light-mode .btn-dark,
+.App.light-mode .btn-outline-light,
+.App.light-mode .btn-info,
+.App.light-mode .send-btn-hover,
+.App.light-mode .pill-btn {
+  background: #f7f7f7 !important;
+  color: #181818 !important;
+  border: 1.5px solid #e0e0e0 !important;
+}
+body.light-mode .btn:hover,
+body.light-mode .btn-dark:hover,
+body.light-mode .btn-outline-light:hover,
+body.light-mode .btn-info:hover,
+body.light-mode .send-btn-hover:hover,
+body.light-mode .pill-btn:hover,
+.App.light-mode .btn:hover,
+.App.light-mode .btn-dark:hover,
+.App.light-mode .btn-outline-light:hover,
+.App.light-mode .btn-info:hover,
+.App.light-mode .send-btn-hover:hover,
+.App.light-mode .pill-btn:hover {
+  background: #e0e0e0 !important;
+  color: #ffb300 !important;
+  border: 1.5px solid #ffb300 !important;
+}
+
+body.light-mode .exp-timeline:before,
+.App.light-mode .exp-timeline:before {
+  background: linear-gradient(180deg, #181818 0%, #ffb300 100%);
+}
+body.light-mode .exp-item:before,
+.App.light-mode .exp-item:before {
+  background: #fff;
+  border: 4px solid #181818;
+  box-shadow: 0 0 0 3px #ffb300, 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+body.light-mode .exp-item.active:before,
+.App.light-mode .exp-item.active:before {
+  background: #ffb300;
+  border: 4px solid #181818;
+}
+
+body.light-mode .tech-badge-modern,
+.App.light-mode .tech-badge-modern {
+  background: #f0f0f0;
+  color: #181818;
+}
+body.light-mode .tech-badge-modern:hover,
+.App.light-mode .tech-badge-modern:hover {
+  background: #ffe082;
+  color: #181818;
+}
+
+body.light-mode .footer,
+.App.light-mode .footer {
+  color: #444;
+}
+
+body.light-mode .plain-link,
+.App.light-mode .plain-link {
+  color: #181818 !important;
+}
+body.light-mode .plain-link:hover,
+.App.light-mode .plain-link:hover {
+  color: #ffb300 !important;
+}
+
+/* Remove underline and hover/active/focus underline for .plain-link and .send-btn-hover in all modes, especially in light mode */
+.plain-link,
+.plain-link:visited,
+.plain-link:active,
+.plain-link:focus {
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.plain-link:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.send-btn-hover,
+.send-btn-hover:visited,
+.send-btn-hover:active,
+.send-btn-hover:focus {
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.send-btn-hover:hover {
+  text-decoration: none !important;
+  color: #fff !important;
+  background: #181818 !important;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.18) !important;
+}
+
+/* Remove underline for all .btn, .btn-link, .btn-dark, .btn-outline-light, .btn:focus, .btn:active, .btn:hover in light mode */
+.light-mode .btn,
+.light-mode .btn-link,
+.light-mode .btn-dark,
+.light-mode .btn-outline-light,
+.light-mode .btn:focus,
+.light-mode .btn:active,
+.light-mode .btn:hover {
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Remove underline for <a> tags inside .plain-link and .send-btn-hover in all states */
+.plain-link a,
+.send-btn-hover a {
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+.plain-link a:hover,
+.send-btn-hover a:hover,
+.plain-link a:focus,
+.send-btn-hover a:focus,
+.plain-link a:active,
+.send-btn-hover a:active {
+  text-decoration: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* ...existing code... */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+  transition: background 0.3s, color 0.3s;
+}
+.App.light-mode {
+  background: #fff;
+  color: #181818;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Max-width container and improved readability */
+.main-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+}
+
+/* Remove profile card styles */
+/* .profile-card, .profile-card .card-body, .profile-img, .profile-name, .profile-title, .profile-location, .profile-actions */
+
+/* About and Experience section: justify text and bullets */
+.card .card-text, .exp-timeline ul, .exp-timeline li {
+  text-align: justify !important;
+}
+.exp-timeline ul {
+  padding-left: 1.2em;
+}
+.exp-timeline li {
+  margin-bottom: 0.5em;
+}
+
+/* Projects: remove link from card, use modal for details like certifications */
+.project-card .plain-link {
+  display: none !important;
+}
+
+/* Projects modal redesign: clean, modern, like certifications modal, with smooth fade+scale animation */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInOverlay 0.25s cubic-bezier(.4,0,.2,1);
+}
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.modal-content.projects-modal {
+  background: #232428 !important;
+  color: #fff !important;
+  border-radius: 1.1rem !important;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.25);
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  animation: modalPopIn 0.32s cubic-bezier(.4,0,.2,1);
+}
+@keyframes modalPopIn {
+  0% { opacity: 0; transform: scale(0.92) translateY(40px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.projects-modal .project-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.projects-modal .project-modal-desc {
+  color: #fff;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+.projects-modal .project-modal-link {
+  color: #0dcaf0;
+  font-weight: 500;
+  word-break: break-all;
+  text-decoration: underline;
+  font-size: 1.05rem;
+}
+.projects-modal .project-modal-link:hover {
+  color: #fff;
+  text-decoration: underline dotted #fff 1.5px;
+}
+
+.pill-btn {
+  background: #18191c;
+  color: black;
+  border: 1px solid #232428;
+  border-radius: 32px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arrow {
+  font-size: 1.1em;
+  margin-left: 4px;
+}
+
+/* Card styles for modern look */
+.card, .cert-card, .tech-card, .project-card {
+  background: #181818 !important;
+  color: #fff !important;
+  border: 1.5px solid #232428 !important;
+  border-radius: 1.1rem !important;
+  margin-bottom: 1.2rem;
+  padding: 1.1rem 1.1rem;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  transition: background 0.3s, color 0.3s;
+}
+body.light-mode .card, body.light-mode .cert-card, body.light-mode .tech-card, body.light-mode .project-card, .App.light-mode .card, .App.light-mode .cert-card, .App.light-mode .tech-card, .App.light-mode .project-card {
+  background: #fff !important;
+  color: #181818 !important;
+  border: 1.5px solid #e0e0e0 !important;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.06);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon {
+  font-size: 1.2em;
+  margin-right: 4px;
+}
+.view-all {
+  margin-left: auto;
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.7;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  user-select: none;
+  cursor: pointer;
+  color: #0dcaf0;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.view-all:hover {
+  
+  text-decoration: none !important;
+}
+
+/* --- SECTION HEADERS: CONSISTENT FONT SIZE & BOLD --- */
+.card-title,
+.card-title .view-all,
+.card-title .plain-link {
+  font-size: 1.18rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em;
+}
+
+/* --- VIEW ALL: REDUCE FONT SIZE, REMOVE UNDERLINE & HOVER IN LIGHT MODE --- */
+.view-all {
+  font-size: 0.97rem !important;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+  color: #232428 !important;
+  font-weight: 600 !important;
+  opacity: 1;
+  padding: 0.12em 0.45em;
+  border-radius: 8px;
+  box-shadow: none !important;
+  outline: none !important;
+  cursor: pointer;
+  transition: none;
+}
+body.light-mode .view-all,
+.App.light-mode .view-all {
+  color: #232428 !important;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+}
+body.light-mode .view-all:hover,
+body.light-mode .view-all:focus,
+body.light-mode .view-all:active,
+.App.light-mode .view-all:hover,
+.App.light-mode .view-all:focus,
+.App.light-mode .view-all:active {
+  color: #232428 !important;
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* --- SEND MESSAGE BUTTON: REMOVE UNDERLINE & HOVER IN LIGHT MODE --- */
+.send-btn-hover,
+.send-btn-hover:focus,
+.send-btn-hover:active,
+.send-btn-hover:hover {
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+body.light-mode .send-btn-hover,
+body.light-mode .send-btn-hover:focus,
+body.light-mode .send-btn-hover:active,
+body.light-mode .send-btn-hover:hover,
+.App.light-mode .send-btn-hover,
+.App.light-mode .send-btn-hover:focus,
+.App.light-mode .send-btn-hover:active,
+.App.light-mode .send-btn-hover:hover {
+  color: #232428 !important;
+  background: #f7f7f7 !important;
+  border: 1.5px solid #e0e0e0 !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Experience timeline styles */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  padding-left: 36px;
+}
+.exp-timeline:before {
+  content: '';
+  position: absolute;
+  left: 36px;
+  top: 0;
+  bottom: 0;
+  width: 2.5px;
+  background: #bdbdbd;
+  border-radius: 2px;
+  z-index: 0;
+  transition: background 0.3s;
+}
+body.light-mode .exp-timeline:before,
+.App.light-mode .exp-timeline:before {
+  background: #e0e0e0;
+}
+.exp-item {
+  position: relative;
+  min-height: 48px;
+}
+.exp-item:before {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background: #232428;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 0 2px #bdbdbd;
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.light-mode .exp-item:before,
+.App.light-mode .exp-item:before {
+  background: #fff;
+  border: 3px solid #232428;
+  box-shadow: 0 0 0 2px #e0e0e0;
+}
+.exp-item.active:before {
+  background: #232428;
+  border: 3px solid #232428;
+  box-shadow: 0 0 0 2px #bdbdbd;
+}
+body.light-mode .exp-item.active:before,
+.App.light-mode .exp-item.active:before {
+  background: #fff;
+  border: 3px solid #232428;
+  box-shadow: 0 0 0 2px #e0e0e0;
+}
+.exp-item:hover:before {
+  box-shadow: 0 0 0 3px #757575;
+  border-color: #757575;
+}
+body.light-mode .exp-item:hover:before,
+.App.light-mode .exp-item:hover:before {
+  box-shadow: 0 0 0 3px #bdbdbd;
+  border-color: #bdbdbd;
+}
+
+/* --- SWITCH UI MODERNIZATION --- */
+.theme-switch .switch {
+  width: 48px;
+  height: 26px;
+  background: #e0e0e0;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.07);
+}
+.theme-switch .switch.dark {
+  background: #232428;
+}
+.theme-switch .slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: left 0.22s cubic-bezier(.4,0,.2,1), background 0.2s, color 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #232428;
+}
+.theme-switch .switch.dark .slider {
+  left: 25px;
+  background: #232428;
+  color: #fff;
+}
+.theme-switch .slider i {
+  font-size: 1.1em;
+  transition: color 0.2s;
+}
+
+/* --- REMOVE TIMELINE VERTICAL LINE AND CIRCLES --- */
+.exp-timeline {
+  padding-left: 0 !important;
+  position: static !important;
+  gap: 32px;
+}
+.exp-timeline:before,
+.exp-item:before,
+.exp-item:after {
+  display: none !important;
+}
+.exp-item {
+  position: static !important;
+  min-height: unset !important;
+  margin-bottom: 2rem;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* --- BUTTONS & LINKS: REMOVE GOLD HOVER, USE NEUTRAL --- */
+.view-all, .btn, .pill-btn, .plain-link {
+  transition: color 0.18s, background 0.18s, border 0.18s;
+}
+.view-all:hover, .btn:hover, .pill-btn:hover, .plain-link:hover {
+  color: #232428 !important;
+  background: #e0e0e0 !important;
+  border-color: #bdbdbd !important;
+  text-decoration: underline dotted #232428 1.5px !important;
+}
+body.light-mode .view-all:hover,
+body.light-mode .btn:hover,
+body.light-mode .pill-btn:hover,
+body.light-mode .plain-link:hover,
+.App.light-mode .view-all:hover,
+.App.light-mode .btn:hover,
+.App.light-mode .pill-btn:hover,
+.App.light-mode .plain-link:hover {
+  color: #232428 !important;
+  background: #e0e0e0 !important;
+  border-color: #bdbdbd !important;
+  text-decoration: underline dotted #232428 1.5px !important;
+}
+
+/* --- TEXT VISIBILITY FOR ALL --- */
+body.light-mode, .App.light-mode, body.light-mode *:not(.bi):not(.icon), .App.light-mode *:not(.bi):not(.icon) {
+  color: #232428 !important;
+}
+
+/* --- 1. DARK/LIGHT MODE SWITCH: UI & FUNCTIONAL FIX --- */
+.theme-switch .switch {
+  width: 48px;
+  height: 26px;
+  background: #e0e0e0;
+  border-radius: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.07);
+}
+.theme-switch .switch.dark {
+  background: #232428;
+}
+.theme-switch .slider {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: left 0.22s cubic-bezier(.4,0,.2,1), background 0.2s, color 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.theme-switch .switch.dark .slider {
+  left: 25px;
+  background: #232428;
+}
+.theme-switch .icon.sun, .theme-switch .icon.moon {
+  font-size: 1.1em;
+  position: absolute;
+  top: 5px;
+  pointer-events: none;
+}
+.theme-switch .icon.sun {
+  left: 8px;
+  color: #232428;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+.theme-switch .icon.moon {
+  right: 8px;
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+body.light-mode .theme-switch .icon.sun {
+  color: #232428;
+  opacity: 1;
+}
+body.light-mode .theme-switch .icon.moon {
+  color: #232428;
+  opacity: 0.3;
+}
+.theme-switch .switch.dark .icon.sun {
+  opacity: 0.3;
+}
+.theme-switch .switch.dark .icon.moon {
+  color: #fff;
+  opacity: 1;
+}
+
+/* --- 2. EXPERIENCE TIMELINE: CENTERED CIRCLE, NO GOLD, CLEAN --- */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  padding-left: 36px;
+}
+.exp-timeline:before {
+  content: '';
+  position: absolute;
+  left: 36px;
+  top: 0;
+  bottom: 0;
+  width: 2.5px;
+  background: #bdbdbd;
+  border-radius: 2px;
+  z-index: 0;
+  transition: background 0.3s;
+}
+body.light-mode .exp-timeline:before,
+.App.light-mode .exp-timeline:before {
+  background: #e0e0e0;
+}
+.exp-item {
+  position: relative;
+  min-height: 48px;
+}
+.exp-item:before {
+  content: '';
+  position: absolute;
+  left: 25px;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background: #232428;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 0 2px #bdbdbd;
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.light-mode .exp-item:before,
+.App.light-mode .exp-item:before {
+  background: #fff;
+  border: 3px solid #232428;
+  box-shadow: 0 0 0 2px #e0e0e0;
+}
+.exp-item.active:before {
+  background: #232428;
+  border: 3px solid #232428;
+  box-shadow: 0 0 0 2px #bdbdbd;
+}
+body.light-mode .exp-item.active:before,
+.App.light-mode .exp-item.active:before {
+  background: #fff;
+  border: 3px solid #232428;
+  box-shadow: 0 0 0 2px #e0e0e0;
+}
+.exp-item:hover:before {
+  box-shadow: 0 0 0 3px #757575;
+  border-color: #757575;
+}
+body.light-mode .exp-item:hover:before,
+.App.light-mode .exp-item:hover:before {
+  box-shadow: 0 0 0 3px #bdbdbd;
+  border-color: #bdbdbd;
+}
+
+/* --- TECH STACK: PILL/OVAL, NO RECTANGLE, CLEAN --- */
+.tech-stack-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: flex-start;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #232428;
+}
+body.light-mode .tech-stack-list,
+.App.light-mode .tech-stack-list {
+  color: #232428;
+}
+.tech-stack-list .category {
+  font-weight: 700;
+  margin-bottom: 0.2em;
+  color: #232428;
+  letter-spacing: 0.01em;
+}
+body.light-mode .tech-stack-list .category,
+.App.light-mode .tech-stack-list .category {
+  color: #232428;
+}
+.tech-stack-list .tech-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.8em;
+  margin-bottom: 0.2em;
+}
+.tech-stack-list .tech-item {
+  color: #232428;
+  background: #f7f7f7;
+  border-radius: 999px;
+  padding: 4px 18px;
+  font-size: 1rem;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  border: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+body.light-mode .tech-stack-list .tech-item,
+.App.light-mode .tech-stack-list .tech-item {
+  color: #232428;
+  background: #f7f7f7;
+  border: none;
+}
+.App .tech-stack-list .tech-item {
+  color: #fff;
+  background: #232428;
+  border: none;
+}
+
+/* --- 4. VIEW ALL BUTTONS: NO HOVER, NO UNDERLINE, NO BORDER --- */
+.view-all {
+  background: none !important;
+  border: none !important;
+  color: #232428 !important;
+  font-weight: 500;
+  font-size: 1rem;
+  opacity: 1;
+  padding: 0.15em 0.5em;
+  border-radius: 8px;
+  transition: none;
+  box-shadow: none;
+  outline: none;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.view-all:hover, .view-all:focus, .view-all:active {
+  color: #fff !important;
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
+/* --- LIGHT MODE TEXT & ICONS: BLACK/DARK --- */
+body.light-mode, .App.light-mode, body.light-mode *:not(.bi):not(.icon), .App.light-mode *:not(.bi):not(.icon) {
+  color: #232428 !important;
+}
+body.light-mode .icon, .App.light-mode .icon, body.light-mode .bi, .App.light-mode .bi {
+  color: #232428 !important;
+}
+
+/* --- 6. CONTACT ME: INPUTS WHITE IN LIGHT MODE, DARK TEXT --- */
+body.light-mode input,
+body.light-mode textarea,
+.App.light-mode input,
+.App.light-mode textarea {
+  background: #fff !important;
+  color: #232428 !important;
+  border: 1.5px solid #e0e0e0 !important;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+  font-weight: 500;
+}
+body.light-mode input:focus,
+body.light-mode textarea:focus,
+.App.light-mode input:focus,
+.App.light-mode textarea:focus {
+  border: 1.5px solid #232428 !important;
+  outline: none !important;
+}
+body.light-mode label,
+.App.light-mode label {
+  color: #232428 !important;
+  font-weight: 700;
+}
+
+/* --- TECH STACK: OVAL BADGES --- */
+.tech-badge-modern {
+  display: inline-block;
+  background: #f3f3f3;
+  color: #232428;
+  border-radius: 999px;
+  padding: 5px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+  margin-right: 6px;
+  border: none;
+  box-shadow: none;
+  letter-spacing: 0.01em;
+  transition: none;
+}
+body.dark-mode .tech-badge-modern,
+.App:not(.light-mode) .tech-badge-modern {
+  background: #232428;
+  color: #fff;
+}
+
+/* --- VIEW ALL PROJECTS: WHITE TEXT IN DARK, NO BG OVERLAY, NO HOVER UNDERLINE --- */
+.modal-content.projects-modal,
+.modal-content,
+body.dark-mode .modal-content.projects-modal,
+body.dark-mode .modal-content,
+.App:not(.light-mode) .modal-content.projects-modal,
+.App:not(.light-mode) .modal-content {
+  background: #fff !important;
+  color: #232428 !important;
+  border: 1.5px solid #e0e0e0 !important;
+}
+.modal-content.projects-modal .project-title,
+.modal-content.projects-modal .project-desc,
+.modal-content .project-title,
+.modal-content .project-desc {
+  color: #232428 !important;
+}
+.modal-content.projects-modal .btn,
+.modal-content.projects-modal .btn:focus,
+.modal-content.projects-modal .btn:active,
+.modal-content.projects-modal .btn:hover {
+  color: #232428 !important;
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
+/* --- MODALS: STRICT WHITE/DARK MODE ENFORCEMENT INCLUDING PROJECTS MODAL --- */
+body.light-mode .modal-content,
+body.light-mode .projects-modal,
+.App.light-mode .modal-content,
+.App.light-mode .projects-modal,
+body.light-mode .modal-content.projects-modal,
+.App.light-mode .modal-content.projects-modal {
+  background: #fff !important;
+  color: #232428 !important;
+  border: 1.5px solid #e0e0e0 !important;
+}
+body.light-mode .modal-content *,
+body.light-mode .projects-modal *,
+.App.light-mode .modal-content *,
+.App.light-mode .projects-modal *,
+body.light-mode .modal-content.projects-modal *,
+.App.light-mode .modal-content.projects-modal * {
+  color: #232428 !important;
+}
+body:not(.light-mode) .modal-content,
+body:not(.light-mode) .projects-modal,
+.App:not(.light-mode) .modal-content,
+.App:not(.light-mode) .projects-modal,
+body:not(.light-mode) .modal-content.projects-modal,
+.App:not(.light-mode) .modal-content.projects-modal {
+  background: #232428 !important;
+  color: #fff !important;
+  border: 1.5px solid #232428 !important;
+}
+body:not(.light-mode) .modal-content *,
+body:not(.light-mode) .projects-modal *,
+.App:not(.light-mode) .modal-content *,
+.App:not(.light-mode) .projects-modal *,
+body:not(.light-mode) .modal-content.projects-modal *,
+.App:not(.light-mode) .modal-content.projects-modal * {
+  color: #fff !important;
+}
+
+/* --- TECH STACK BADGE HOVER: SAME ANIMATION FOR BOTH MODES --- */
+.tech-badge-modern {
+  transition: background 0.22s cubic-bezier(.4,0,.2,1), color 0.22s cubic-bezier(.4,0,.2,1), border 0.22s cubic-bezier(.4,0,.2,1);
+}
+.tech-badge-modern:hover,
+body.dark-mode .tech-badge-modern:hover,
+.App:not(.light-mode) .tech-badge-modern:hover,
+body.light-mode .tech-badge-modern:hover,
+.App.light-mode .tech-badge-modern:hover {
+  background: #232428 !important;
+  color: #fff !important;
+  border: 1.5px solid #fff !important;
+}
+
+/* --- DARK MODE MINIMALISTIC: ALL CARDS, MODALS, TEXT WHITE, NO HOVER ON BACK BUTTONS, CENTER PROJECT NAMES --- */
+body:not(.light-mode) .card,
+body:not(.light-mode) .cert-card,
+body:not(.light-mode) .tech-card,
+body:not(.light-mode) .project-card,
+.App:not(.light-mode) .card,
+.App:not(.light-mode) .cert-card,
+.App:not(.light-mode) .tech-card,
+.App:not(.light-mode) .project-card {
+  background: #181818 !important;
+  color: #fff !important;
+  border: 1.5px solid #232428 !important;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+}
+body:not(.light-mode) .modal-content,
+body:not(.light-mode) .projects-modal,
+.App:not(.light-mode) .modal-content,
+.App:not(.light-mode) .projects-modal {
+  background: #181818 !important;
+  color: #fff !important;
+  border: 1.5px solid #232428 !important;
+}
+body:not(.light-mode) .modal-content *,
+body:not(.light-mode) .projects-modal *,
+.App:not(.light-mode) .modal-content *,
+.App:not(.light-mode) .projects-modal * {
+  color: #fff !important;
+}
+body:not(.light-mode) .view-all,
+.App:not(.light-mode) .view-all {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+body:not(.light-mode) .view-all:hover,
+body:not(.light-mode) .view-all:focus,
+body:not(.light-mode) .view-all:active,
+.App:not(.light-mode) .view-all:hover,
+.App:not(.light-mode) .view-all:focus,
+.App:not(.light-mode) .view-all:active {
+  color: #fff !important;
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none;
+  box-shadow: none;
+}
+/* Center project names in modal */
+.projects-modal .project-title,
+.modal-content.projects-modal .project-title {
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  color: #fff !important;
+}
+/* Modal back button: no hover effect in all modes */
+.btn-back-modern,
+.btn-back-modern:focus,
+.btn-back-modern:active,
+.btn-back-modern:hover {
+  background: none !important;
+  border: none !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  transition: none !important;
+}
+
+/* --- MODAL PROJECTS: NO BACK HOVER, CENTER TITLE --- */
+.projects-modal .modal-header .btn-back-modern,
+.projects-modal .modal-header .btn-back-modern:focus,
+.projects-modal .modal-header .btn-back-modern:active,
+.projects-modal .modal-header .btn-back-modern:hover {
+  background: none !important;
+  border: none !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  transition: none !important;
+}
+.projects-modal .modal-title {
+  width: 100%;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  color: #fff !important;
+}
+
+/* --- EXPERIENCE: CLOSER SPACING --- */
+.exp-timeline {
+  gap: 12px !important;
+}
+.exp-item {
+  margin-bottom: 0.7rem !important;
+}
+
+/* --- LIGHT MODE: NO UNDERLINE/HOVER ON VIEW ALL EVEN WHEN CLICKED --- */
+body.light-mode .view-all,
+.App.light-mode .view-all {
+  color: #232428 !important;
+  text-decoration: none !important;
+  background: none !important;
+  border: none !important;
+}
+body.light-mode .view-all:hover,
+body.light-mode .view-all:focus,
+body.light-mode .view-all:active,
+.App.light-mode .view-all:hover,
+.App.light-mode .view-all:focus,
+.App.light-mode .view-all:active {
+  color: #232428 !important;
+  background: none !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* --- DARK MODE: SEND MESSAGE BUTTON COLOR --- */
+body:not(.light-mode) .send-btn-hover,
+.App:not(.light-mode) .send-btn-hover {
+  background: #232428 !important;
+  color: #fff !important;
+  border: none !important;
+  text-decoration: none !important;
+   box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10) !important;
+  outline: none !important;
+  font-weight: 700;
+  transition: background 0.18s, color 0.18s;
+}
+body:not(.light-mode) .send-btn-hover:hover,
+.App:not(.light-mode) .send-btn-hover:hover,
+body:not(.light-mode) .send-btn-hover:focus,
+.App:not(.light-mode) .send-btn-hover:focus,
+body:not(.light-mode) .send-btn-hover:active,
+.App:not(.light-mode) .send-btn-hover:active {
+  background: #fff !important;
+  color: #121212 !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10) !important;
+}
+
+/* --- LIGHT MODE: SEND MESSAGE BUTTON NO HOVER/UNDERLINE --- */
+body.light-mode .send-btn-hover,
+.App.light-mode .send-btn-hover {
+  background: #fff !important;
+  color: #121212 !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10) !important;
+  font-weight: 700;
+}
+body.light-mode .send-btn-hover:hover,
+body.light-mode .send-btn-hover:focus,
+body.light-mode .send-btn-hover:active,
+.App.light-mode .send-btn-hover:hover,
+.App.light-mode .send-btn-hover:focus,
+.App.light-mode .send-btn-hover:active {
+  background: #181818 !important;
+  color: #fff !important;
+  border: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10) !important;
+}
+
+/* --- MODAL PROJECTS: BACK ICON NO HOVER, TITLE CENTER --- */
+.projects-modal .modal-header .btn-back-modern,
+.projects-modal .modal-header .btn-back-modern:focus,
+.projects-modal .modal-header .btn-back-modern:active,
+.projects-modal .modal-header .btn-back-modern:hover {
+  background: none !important;
+  border: none !important;
+  color: inherit !important;
+  box-shadow: none !important;
+  outline: none !important;
+  text-decoration: none !important;
+  transition: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+.projects-modal .modal-title {
+  width: 100%;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+  color: #fff !important;
+}
+
+/* --- UNIFIED CARD/BADGE HOVER ANIMATION FOR PROJECTS & CERTIFICATIONS (DARK/LIGHT MODE, INCLUDING TEXT COLOR) --- */
+@keyframes cardHoverPop {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.045); }
+  100% { transform: scale(1.025); }
+}
+
+.project-card,
+.cert-card,
+.tech-badge-modern {
+  transition: background 0.22s cubic-bezier(.4,0,.2,1), color 0.22s cubic-bezier(.4,0,.2,1), border 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1), transform 0.18s cubic-bezier(.4,0,.2,1);
+}
+
+/* DARK MODE: hover = blue accent, white text (all children), pop */
+body:not(.light-mode) .project-card:hover,
+body:not(.light-mode) .cert-card:hover,
+body:not(.light-mode) .projects-modal .project-card:hover,
+body:not(.light-mode) .projects-modal .cert-card:hover,
+body:not(.light-mode) .modal-content.projects-modal .project-card:hover,
+body:not(.light-mode) .modal-content.projects-modal .cert-card:hover {
+  background: #fff !important;
+  color: #fff !important;
+  border: 1.5px solid #fff !important;
+  text-decoration: none !important;
+  transform: scale(1.025);
+  animation: cardHoverPop 0.18s cubic-bezier(.4,0,.2,1);
+}
+body:not(.light-mode) .project-card:hover *,
+body:not(.light-mode) .cert-card:hover *,
+body:not(.light-mode) .projects-modal .project-card:hover *,
+body:not(.light-mode) .projects-modal .cert-card:hover *,
+body:not(.light-mode) .modal-content.projects-modal .project-card:hover *,
+body:not(.light-mode) .modal-content.projects-modal .cert-card:hover * {
+  color: #181818 !important;
+}
+
+/* LIGHT MODE: hover = dark accent, white text (all children), pop */
+body.light-mode .project-card:hover,
+body.light-mode .cert-card:hover,
+.App.light-mode .project-card:hover,
+.App.light-mode .cert-card:hover,
+body.light-mode .projects-modal .project-card:hover,
+body.light-mode .projects-modal .cert-card:hover,
+.App.light-mode .projects-modal .project-card:hover,
+.App.light-mode .projects-modal .cert-card:hover,
+body.light-mode .modal-content.projects-modal .project-card:hover,
+body.light-mode .modal-content.projects-modal .cert-card:hover,
+.App.light-mode .modal-content.projects-modal .project-card:hover,
+.App.light-mode .modal-content.projects-modal .cert-card:hover {
+  background: #232428 !important;
+  color: #fff !important;
+  border: 1.5px solid #232428 !important;
+  text-decoration: none !important;
+  transform: scale(1.025);
+  animation: cardHoverPop 0.18s cubic-bezier(.4,0,.2,1);
+}
+body.light-mode .project-card:hover *,
+body.light-mode .cert-card:hover *,
+.App.light-mode .project-card:hover *,
+.App.light-mode .cert-card:hover *,
+body.light-mode .projects-modal .project-card:hover *,
+body.light-mode .projects-modal .cert-card:hover *,
+.App.light-mode .projects-modal .project-card:hover *,
+.App.light-mode .projects-modal .cert-card:hover *,
+body.light-mode .modal-content.projects-modal .project-card:hover *,
+body.light-mode .modal-content.projects-modal .cert-card:hover *,
+.App.light-mode .modal-content.projects-modal .project-card:hover *,
+.App.light-mode .modal-content.projects-modal .cert-card:hover * {
+  color: #fff !important;
+}
+
+/* --- SIMPLE CARD/BADGE HOVER ANIMATION FOR PROJECTS & CERTIFICATIONS (DARK/LIGHT MODE, INCLUDING TEXT COLOR) --- */
+@keyframes cardSimplePop {
+  from { transform: scale(1); }
+  to { transform: scale(1.03); }
+}
+
+.project-card,
+.cert-card,
+.tech-badge-modern {
+  transition: background 0.18s cubic-bezier(.4,0,.2,1), color 0.18s cubic-bezier(.4,0,.2,1), border 0.18s cubic-bezier(.4,0,.2,1), box-shadow 0.18s cubic-bezier(.4,0,.2,1), transform 0.14s cubic-bezier(.4,0,.2,1);
+}
+
+/* DARK MODE: hover = blue accent, white text (all children), simple pop */
+body:not(.light-mode) .project-card:hover,
+body:not(.light-mode) .cert-card:hover,
+body:not(.light-mode) .projects-modal .project-card:hover,
+body:not(.light-mode) .projects-modal .cert-card:hover,
+body:not(.light-mode) .modal-content.projects-modal .project-card:hover,
+body:not(.light-mode) .modal-content.projects-modal .cert-card:hover {
+  background: #232428 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  box-shadow: #fff !important;
+  text-decoration: none !important;
+  transform: scale(1.03);
+  animation: cardSimplePop 0.14s cubic-bezier(.4,0,.2,1);
+}
+body:not(.light-mode) .project-card:hover *,
+body:not(.light-mode) .cert-card:hover *,
+body:not(.light-mode) .projects-modal .project-card:hover *,
+body:not(.light-mode) .projects-modal .cert-card:hover *,
+body:not(.light-mode) .modal-content.projects-modal .project-card:hover *,
+body:not(.light-mode) .modal-content.projects-modal .cert-card:hover * {
+  color: #fff !important;
+}
+
+/* LIGHT MODE: hover = dark accent, white text (all children), simple pop */
+body.light-mode .project-card:hover,
+body.light-mode .cert-card:hover,
+.App.light-mode .project-card:hover,
+.App.light-mode .cert-card:hover,
+body.light-mode .projects-modal .project-card:hover,
+body.light-mode .projects-modal .cert-card:hover,
+.App.light-mode .projects-modal .project-card:hover,
+.App.light-mode .projects-modal .cert-card:hover,
+body.light-mode .modal-content.projects-modal .project-card:hover,
+body.light-mode .modal-content.projects-modal .cert-card:hover,
+.App.light-mode .modal-content.projects-modal .project-card:hover,
+.App.light-mode .modal-content.projects-modal .cert-card:hover {
+  background: #232428 !important;
+  color: #fff !important;
+  border: 1.5px solid #232428 !important;
+  box-shadow: 0 2px 10px 0 rgba(35,36,40,0.13) !important;
+  text-decoration: none !important;
+  transform: scale(1.03);
+  animation: cardSimplePop 0.14s cubic-bezier(.4,0,.2,1);
+}
+body.light-mode .project-card:hover *,
+body.light-mode .cert-card:hover *,
+.App.light-mode .project-card:hover *,
+.App.light-mode .cert-card:hover *,
+body.light-mode .projects-modal .project-card:hover *,
+body.light-mode .projects-modal .cert-card:hover *,
+.App.light-mode .projects-modal .project-card:hover *,
+.App.light-mode .projects-modal .cert-card:hover *,
+body.light-mode .modal-content.projects-modal .project-card:hover *,
+body.light-mode .modal-content.projects-modal .cert-card:hover *,
+.App.light-mode .modal-content.projects-modal .project-card:hover *,
+.App.light-mode .modal-content.projects-modal .cert-card:hover * {
+  color: #fff !important;
+}
+
+/* --- HOVER EFFECT FOR ALL CERTIFICATION CARDS IN MODAL (SAME AS .cert-card) --- */
+.cert-modal-card,
+.cert-modal-card-hover {
+  transition: background 0.22s cubic-bezier(.4,0,.2,1), color 0.22s cubic-bezier(.4,0,.2,1), border 0.22s cubic-bezier(.4,0,.2,1), box-shadow 0.22s cubic-bezier(.4,0,.2,1), transform 0.18s cubic-bezier(.4,0,.2,1);
+}
+body:not(.light-mode) .cert-modal-card:hover,
+body:not(.light-mode) .cert-modal-card-hover:hover {
+  background: #fff !important;
+  color: #181818 !important;
+  border: 1.5px solid #fff !important;
+  text-decoration: none !important;
+  transform: scale(1.025);
+  animation: cardHoverPop 0.18s cubic-bezier(.4,0,.2,1);
+}
+body:not(.light-mode) .cert-modal-card:hover *,
+body:not(.light-mode) .cert-modal-card-hover:hover * {
+  color: #181818 !important;
+}
+body.light-mode .cert-modal-card:hover,
+body.light-mode .cert-modal-card-hover:hover,
+.App.light-mode .cert-modal-card:hover,
+.App.light-mode .cert-modal-card-hover:hover {
+  background: #232428 !important;
+  color: #fff !important;
+  border: 1.5px solid #232428 !important;
+  text-decoration: none !important;
+  transform: scale(1.025);
+  animation: cardHoverPop 0.18s cubic-bezier(.4,0,.2,1);
+}
+body.light-mode .cert-modal-card:hover *,
+body.light-mode .cert-modal-card-hover:hover *,
+.App.light-mode .cert-modal-card:hover *,
+.App.light-mode .cert-modal-card-hover:hover * {
+  color: #fff !important;
+}
+
+/* Hide arrow and remove hover background for view-all arrow in light mode */
+body.light-mode .view-all .arrow {
+  display: none !important;
+}
+body.light-mode .modal-title  .btn-back-modern, .modal-header .btn-back-modern  {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+body.light-mode  .modal-header .btn-back-modern {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
+body.dark-mode .modal-header .btn-back-modern {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.custom-cert-modal-back,
+.custom-cert-modal-back:hover,
+.custom-cert-modal-back:focus,
+.custom-cert-modal-back:active {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  color: inherit !important;
+  transition: none !important;
+}
+@media (prefers-color-scheme: dark) {
+  .custom-cert-modal-back,
+  .custom-cert-modal-back:hover,
+  .custom-cert-modal-back:focus,
+  .custom-cert-modal-back:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    color: inherit !important;
+    transition: none !important;
+  }
+}
+body.light-mode .custom-cert-modal-back,
+body.light-mode .custom-cert-modal-back:hover,
+body.light-mode .custom-cert-modal-back:focus,
+body.light-mode .custom-cert-modal-back:active,
+.App.light-mode .custom-cert-modal-back,
+.App.light-mode .custom-cert-modal-back:hover,
+.App.light-mode .custom-cert-modal-back:focus,
+.App.light-mode .custom-cert-modal-back:active {
+  background: none !important;
+  color: #232428 !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: none !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+  cursor: pointer;
+}
