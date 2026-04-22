@@ -420,11 +420,7 @@ function App() {
                     <i className="bi bi-briefcase" style={sectionIconStyle}></i> About
                   </h5>
                   <div className="card-text">
-                   Hi, I'm Mark Berio, a computer engineer with a passion for building user-friendly and efficient digital solutions. I have learned web development skills including HTML, CSS, and JavaScript, and have hands-on experience developing Windows applications using VB.NET. I also specialize in building embedded system projects and writing low-level code to interface with hardware.<br></br><br></br>
-
-In addition to development, I have a strong background in technical support, where I handled troubleshooting for both hardware and software issues. This experience has strengthened my problem-solving skills and given me a deeper understanding of system-level operations. <br></br><br></br>
-
-Currently, I am learning this React.js for front-end development, along with Python, Node.js, Machine Learning, TypeScript, Rust, and Actix Web for back-end development. I'm always eager to explore new technologies and develop solutions that seamlessly combine functionality and design.
+                 I’m a computer engineer focused on building user-friendly and efficient digital solutions. I have experience in web development (HTML, CSS, JavaScript), Windows application development using VB.NET, and embedded systems programming. With experience in technical support, I bring strong problem-solving skills and a deep understanding of system-level operations. Currently, I’m expanding my expertise in React.js, Node.js, and modern backend technologies to build full-stack applications that combine performance with great user experience.
                   </div>
                 </div>
               </div>
