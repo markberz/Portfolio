@@ -74,11 +74,11 @@ function App() {
       date: 'May - July 2025',
       title: 'Programmer',
       desc: [
-        'Collaborate with the development team to design, develop, and maintain software applications using Rust.',
-        'Take part in code reviews, debugging, and testing to uphold code quality and performance.',
+        'Developed and maintained Rust-based applications, contributing to backend logic, assisting with frontend integration, and performing code reviews, debugging, and testing to ensure performance and reliability.',
+        'Contributed to improving the RustFL system by fixing issues in federated learning workflows, including resolving PyTorch and LibTorch version compatibility.',
+        'Built a Playwright-based automation script that takes a name as input, automatically searches Google Images, verifies matching results, and downloads the top 3 relevant images.',
         'Continuously learn and apply new programming techniques and technologies to improve development practices.',
-        'Assist in the development of new features and the enhancement of existing systems.',
-        'Work closely with team members to solve technical challenges and contribute to project success.'
+      
       ]
     },
     {
